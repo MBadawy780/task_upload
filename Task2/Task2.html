@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+</head>
+<script>
+    function pick1(){
+    let r=document.getElementById("red").value;
+    let g=document.getElementById("green").value;
+    let b=document.getElementById("blue").value;
+    
+    document.getElementById("div2").style.backgroundColor = "rgb("+r+","+g+","+b+")";    
+}
+   function pick2(){
+    let R=document.getElementById("RED").value;
+    let G=document.getElementById("GREEN").value;
+    let B=document.getElementById("BLUE").value;
+    
+    document.getElementById("div2").style.backgroundColor = "rgb("+R+","+G+","+B+")";
+   }
+</script>
+<body>
+    
+    <div id="div2" style="background-color: rgb(0, 0, 0); height: 200px; width: 40%; margin: auto;">
+
+    </div>
+
+    <table style="margin: auto;">
+        <tr>
+            <td>RED</td>
+            <td><input type="text" id="red" style="width: 50px;"></td>
+            <td><input type="range" min="0" max="255" id="RED"></td>
+            
+            
+        </tr>
+        <tr>
+            <td>GREEN</td>
+            <td><input type="text" id="green" style="width: 50px;"></td>
+            <td><input type="range" min="0" max="255" id="GREEN"></td>
+            
+        </tr>
+        <tr>
+            <td>BLUE</td>
+            <td><input type="text" id="blue" style="width: 50px;"></td>
+            <td><input type="range" min="0" max="255" id="BLUE"></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td></td>
+              <td ><button id="btn" onclick="pick1()">pick color</button></td>
+              <td ><button id="btn" onclick="pick2()">pick color</button></td>
+              
+        </tr>
+    </table>
+    
+    
+
+
+
+
+   
+</body>
+</html>
